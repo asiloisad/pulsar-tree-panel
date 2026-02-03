@@ -46,7 +46,7 @@
     "sortMethod": {
       "order": 1,
       "type": "string",
-      "default": "natural",
+      "default": "default",
       "enum": [
         {"value": "default", "description": "Default (locale-aware, numeric)"},
         {"value": "natural", "description": "Natural sort (alphabetical and numbers)"}
@@ -56,13 +56,13 @@
     "sortFoldersBeforeFiles": {
       "order": 2,
       "type": "boolean",
-      "default": true,
+      "default": false,
       "description": "When listing directory items, list subdirectories before listing files."
     },
     "sortByBase": {
       "order": 3,
       "type": "boolean",
-      "default": true,
+      "default": false,
       "description": "Sort by filename base and extension independently. Files with the same base name are grouped together."
     },
     "showOnRightSide": {
@@ -121,17 +121,17 @@
       "default": false,
       "description": "When enabled, the tree view becomes a permanent dock item that cannot be closed."
     },
-    "openFilesOnSingleClick": {
+    "fileDoubleClick": {
       "order": 13,
       "type": "boolean",
-      "default": true,
-      "description": "Open files with a single click instead of a double click. When disabled, single click only selects the entry."
+      "default": false,
+      "description": "Require double click to open files. When enabled, single click only selects the entry."
     },
-    "openFoldersOnSingleClick": {
+    "dirDoubleClick": {
       "order": 14,
       "type": "boolean",
-      "default": true,
-      "description": "Expand/collapse folders with a single click instead of a double click. When disabled, single click only selects the entry. The arrow icon always responds to a single click."
+      "default": false,
+      "description": "Require double click to expand/collapse folders. When enabled, single click only selects the entry. The arrow icon always responds to a single click."
     }
   }
 }
