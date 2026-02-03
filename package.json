@@ -118,6 +118,18 @@
       "type": "boolean",
       "default": false,
       "description": "When enabled, the tree view becomes a permanent dock item that cannot be closed."
+    },
+    "openFilesOnSingleClick": {
+      "order": 13,
+      "type": "boolean",
+      "default": true,
+      "description": "Open files with a single click instead of a double click. When disabled, single click only selects the entry."
+    },
+    "openFoldersOnSingleClick": {
+      "order": 14,
+      "type": "boolean",
+      "default": true,
+      "description": "Expand/collapse folders with a single click instead of a double click. When disabled, single click only selects the entry. The arrow icon always responds to a single click."
     }
   }
 }
