@@ -2,14 +2,16 @@
   "name": "tree-view-plus",
   "version": "0.229.1",
   "main": "./lib/main",
-  "description": "Explore and open files in the current project.",
-  "repository": "https://github.com/pulsar-edit/pulsar",
+  "description": "Enhanced tree view for exploring and opening project files. Features configurable click behavior, natural sorting, base name grouping, debounced file watching, and lightweight dependencies.",
+  "repository": "https://github.com/asiloisad/pulsar-tree-view-plus",
+  "bugs": {
+    "url": "https://github.com/asiloisad/pulsar-tree-view-plus/issues"
+  },
   "license": "MIT",
   "engines": {
     "atom": "*",
     "node": ">=14"
   },
-  "private": true,
   "dependencies": {
     "minimatch": "^10.1.2",
     "natural-compare-lite": "^1.4.0"
