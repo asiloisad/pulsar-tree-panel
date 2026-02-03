@@ -18,6 +18,7 @@ module.exports = {
     requestAnimationFrame: "readonly",
   },
   rules: {
+    "no-cond-assign": "off",
     "no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^etch$" }],
   },
 };
