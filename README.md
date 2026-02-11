@@ -25,7 +25,7 @@ External packages can consume the `tree-view-roots` service to add virtual root 
 ```javascript
 // In your package's consumeRoots method:
 consumeRoots(api) {
-  this.handle = api.addRoot({
+  this.handle = api.registerRoot({
     name: 'My Section',        // Section header text
     iconClass: 'icon-star',    // Icon class for the header
     className: 'my-section',   // CSS class for the section
