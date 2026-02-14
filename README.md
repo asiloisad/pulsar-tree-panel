@@ -16,14 +16,29 @@ Enhanced tree view for exploring and opening project files.
 - **Lightweight dependencies**: Removed `underscore-plus` and `fs-plus` in favor of native Node.js APIs.
 - **Special roots service**: Provides a `tree-view-roots` service that lets external packages inject virtual root sections into the tree view. Used by [tree-view-favourites](https://web.pulsar-edit.dev/packages/tree-view-favourites) to add favourite sections.
 
-## Services
+## Installation
 
-### `tree-view-roots` (provided)
+To install `tree-view-plus` search for [tree-view-plus](https://web.pulsar-edit.dev/packages/tree-view-plus) in the Install pane of the Pulsar settings or run `ppm install tree-view-plus`. Alternatively, you can run `ppm install asiloisad/pulsar-tree-view-plus` to install a package directly from the GitHub repository.
 
-External packages can consume the `tree-view-roots` service to add virtual root sections above the project folders.
+## Provided Service `tree-view-roots`
+
+Allows external packages to inject virtual root sections into the tree view above the project folders. Used by [tree-view-favourites](https://web.pulsar-edit.dev/packages/tree-view-favourites) to add favourite sections.
+
+In your `package.json`:
+
+```json
+{
+  "consumedServices": {
+    "tree-view-roots": {
+      "versions": { "1.0.0": "consumeRoots" }
+    }
+  }
+}
+```
+
+In your main module:
 
 ```javascript
-// In your package's consumeRoots method:
 consumeRoots(api) {
   this.handle = api.registerRoot({
     name: 'My Section',        // Section header text
@@ -41,10 +56,6 @@ The returned handle provides:
 - `handle.update()` — re-reads entries and re-renders
 - `handle.toggle()` — toggle section visibility
 - `handle.dispose()` — remove the section
-
-## Installation
-
-To install `tree-view-plus` search for [tree-view-plus](https://web.pulsar-edit.dev/packages/tree-view-plus) in the Install pane of the Pulsar settings or run `ppm install tree-view-plus`. Alternatively, you can run `ppm install asiloisad/pulsar-tree-view-plus` to install a package directly from the GitHub repository.
 
 ## Contributing
 
